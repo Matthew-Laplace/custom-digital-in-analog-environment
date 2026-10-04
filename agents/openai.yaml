@@ -1,0 +1,4 @@
+interface:
+  display_name: "Virtuoso Standard-Cell Layout"
+  short_description: "Bounded standard-cell placement, routing, and route acceptance"
+  default_prompt: "Use $virtuoso-standard-cell-layout to freeze one bounded Virtuoso layout transaction, run the stages in order, and keep route quality, OA persistence, DRC, and LVS as separate evidence gates."
