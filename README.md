@@ -1,5 +1,7 @@
 # Virtuoso Standard-Cell Layout
 
+[English](README.md) | [日本語](README.ja.md) | [繁體中文](README.zh-TW.md)
+
 An agent skill for taking a Cadence Virtuoso standard-cell or custom-digital
 block from an empty artifact set to an accepted, well-evidenced route.
 
@@ -54,6 +56,8 @@ missing gate, and a passing result in one layer never stands in for another.
 ```
 SKILL.md                                entry point, stage order, gates
 README.md                               this file
+README.ja.md                            the same, in Japanese
+README.zh-TW.md                         the same, in Traditional Chinese
 ATTRIBUTION.md                          sources and evidence levels
 LICENSE                                 MIT
 agents/openai.yaml                      skill interface metadata
