@@ -1,6 +1,6 @@
 ---
-name: virtuoso-standard-cell-layout
-description: Plan, execute, and gate Cadence Virtuoso standard-cell placement and signal routing in Layout XL - source/layout/physConfig establishment, PR-boundary placement, explicit M1 supply tracks, bounded route-feedback closure, strict via-array acceptance, and LUP-constrained tap insertion - while keeping OA writes, persistence, DRC, and LVS as separate evidence gates. Use when generating or correcting a standard-cell or custom-digital block by script; do not use it as a PDK rule deck or as a general OA-write authorization.
+name: custom-digital-in-analog-environment
+description: Plan, execute, and gate custom-digital placement and signal routing inside an analog design environment - Layout XL source/layout/physConfig establishment, PR-boundary placement, explicit M1 supply tracks, bounded route-feedback closure, strict via-array acceptance, and LUP-constrained tap insertion - while keeping OA writes, persistence, DRC, and LVS as separate evidence gates. Use when generating or correcting a standard-cell or custom-digital block in a mostly analog design by script; do not use it as a PDK rule deck or as a general OA-write authorization.
 metadata:
   skill_type: "cadence-automation"
   skill_type_zh: "Cadence 自动化"
@@ -8,10 +8,12 @@ metadata:
     - "skill-type/cadence-automation"
 ---
 
-# Virtuoso Standard-Cell Layout
+# Custom Digital In Analog Environment
 
-This skill carries one bounded Virtuoso layout transaction from artifact
-establishment through placement, supply tracks, routing, and route acceptance.
+This skill carries one bounded layout transaction inside an analog design
+environment - custom digital placed and routed alongside analog blocks - from
+artifact establishment through placement, supply tracks, routing, and route
+acceptance.
 It is the single owner of stage order, candidate selection, and the decision to
 accept or reject a routed candidate.
 

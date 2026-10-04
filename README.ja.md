@@ -1,10 +1,18 @@
-# Virtuoso Standard-Cell Layout
+# Custom Digital In Analog Environment
 
 [English](README.md) | [日本語](README.ja.md) | [繁體中文](README.zh-TW.md)
 
-Cadence Virtuoso 上で、スタンダードセルまたはカスタムデジタルのブロックを、
-空のアーティファクト集合から、根拠の揃った配線完了状態まで持っていくための
+アナログ設計環境の中に置かれたカスタムデジタルのブロックを、空の
+アーティファクト集合から、根拠の揃った配線完了状態まで持っていくための
 エージェント skill です。
+
+アナログのフローでは、デジタル部分がきれいなブロック境界として存在すること
+はまれです。ライブラリ、プロセス、電源ドメイン、そして多くの場合セルビューの
+階層をアナログ回路と共有し、ツールを操作するのはデジタル実装の専門家では
+なくアナログ設計者であることも珍しくありません。この skill はその状況を前提
+にしています。すべては設計ごとにバインドし、デジタル専用フローからの既定値を
+引き継がず、各段階はツールチェーンではなく回路を知っている人が確認できる形に
+してあります。
 
 スタンダードセルの自動化は、たいてい同じ場所で壊れます。`physConfig` が機能
 しないままレイアウトだけが作られる。セルが誤った境界図形を基準に置かれる。
@@ -76,7 +84,7 @@ scripts/
 ディレクトリごとエージェントの skill フォルダへコピーします。
 
 ```bash
-cp -R virtuoso-standard-cell-layout ~/.codex/skills/virtuoso-standard-cell-layout
+cp -R custom-digital-in-analog-environment ~/.codex/skills/custom-digital-in-analog-environment
 ```
 
 中身は素の Markdown と、標準ライブラリだけで動く Python 2 ファイルです。

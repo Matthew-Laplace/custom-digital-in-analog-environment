@@ -3,7 +3,8 @@
 ## Origin Of This Skill
 
 This skill consolidates two working agent skills that were developed while
-operating Cadence Virtuoso on real standard-cell and custom-digital blocks:
+operating Cadence Virtuoso on real custom-digital blocks placed inside analog
+designs:
 
 - `virtuoso-standard-cell-layout-flow` - stage order, placement policy, route
   acceptance, tap contract, and completion gates.

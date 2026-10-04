@@ -1,9 +1,18 @@
-# Virtuoso Standard-Cell Layout
+# Custom Digital In Analog Environment
 
 [English](README.md) | [日本語](README.ja.md) | [繁體中文](README.zh-TW.md)
 
-An agent skill for taking a Cadence Virtuoso standard-cell or custom-digital
-block from an empty artifact set to an accepted, well-evidenced route.
+An agent skill for taking a custom-digital block that lives inside an analog
+design environment, from an empty artifact set to an accepted, well-evidenced
+route.
+
+In an analog flow the digital part is rarely a clean block boundary. It shares
+the library, the process, the power domains, and often the cellview hierarchy
+with analog circuitry, and the person driving the tool may be an analog
+designer rather than a digital implementation engineer. The workflow here
+assumes exactly that setting: everything is bound per design, nothing is
+inherited from a digital-only flow, and each stage is checkable by someone who
+knows the circuit rather than the toolchain.
 
 Standard-cell automation usually fails in the same places: a layout is created
 without a working `physConfig`, cells are placed against the wrong boundary
@@ -77,7 +86,7 @@ scripts/
 Copy the directory into your agent's skill folder, for example:
 
 ```bash
-cp -R virtuoso-standard-cell-layout ~/.codex/skills/virtuoso-standard-cell-layout
+cp -R custom-digital-in-analog-environment ~/.codex/skills/custom-digital-in-analog-environment
 ```
 
 The skill is plain Markdown plus two standard-library Python files. There is

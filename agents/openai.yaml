@@ -1,4 +1,4 @@
 interface:
-  display_name: "Virtuoso Standard-Cell Layout"
-  short_description: "Bounded standard-cell placement, routing, and route acceptance"
-  default_prompt: "Use $virtuoso-standard-cell-layout to freeze one bounded Virtuoso layout transaction, run the stages in order, and keep route quality, OA persistence, DRC, and LVS as separate evidence gates."
+  display_name: "Custom Digital In Analog Environment"
+  short_description: "Bounded custom-digital placement, routing, and route acceptance inside an analog design"
+  default_prompt: "Use $custom-digital-in-analog-environment to freeze one bounded layout transaction for a custom-digital block inside an analog design, run the stages in order, and keep route quality, OA persistence, DRC, and LVS as separate evidence gates."

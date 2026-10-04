@@ -1,9 +1,15 @@
-# Virtuoso Standard-Cell Layout
+# Custom Digital In Analog Environment
 
 [English](README.md) | [日本語](README.ja.md) | [繁體中文](README.zh-TW.md)
 
-一套 agent skill，把 Cadence Virtuoso 上的標準元件或自訂數位區塊，從空的
-artifact 集合帶到有憑據支撐的繞線完成狀態。
+一套 agent skill，把位於類比設計環境中的自訂數位區塊，從空的 artifact 集合
+帶到有憑據支撐的繞線完成狀態。
+
+在類比流程裡，數位部分很少是一個乾淨的區塊邊界。它與類比電路共用 library、
+製程、電源域，而且往往共用 cellview 階層；實際操作工具的人，也常是熟悉電路
+的類比設計者，而不是數位實作工程師。這套 skill 正是以這個情境為前提：所有
+條件都逐設計綁定，不繼承任何純數位流程的預設值，而且每個階段都能由懂電路、
+而非懂工具鏈的人來檢查。
 
 標準元件自動化幾乎都敗在同幾個地方：`physConfig` 還沒生效就先把 layout 建好；
 cell 依錯誤的邊界圖形擺放；電源軌被當成理所當然已連通；完成率顯示 100% 就
@@ -69,7 +75,7 @@ scripts/
 把整個目錄複製到 agent 的 skill 資料夾，例如：
 
 ```bash
-cp -R virtuoso-standard-cell-layout ~/.codex/skills/virtuoso-standard-cell-layout
+cp -R custom-digital-in-analog-environment ~/.codex/skills/custom-digital-in-analog-environment
 ```
 
 內容是純 Markdown 加上兩個只用標準函式庫的 Python 檔案，不需要建置，也不
